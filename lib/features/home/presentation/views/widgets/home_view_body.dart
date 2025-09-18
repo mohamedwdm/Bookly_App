@@ -10,21 +10,21 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomAppBar(),
           FeaturedBooksListView(),
-          SizedBox(height: 50,),
-          Text('Best Seller', style: Styles.titleMedium),
+          SizedBox(height: 50),
+          Text('Best Seller', style: Styles.textStyle18),
+          SizedBox(height: 20),
           BestSellerListViewItem(),
         ],
       ),
     );
   }
 }
-
 
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key});
@@ -36,14 +36,31 @@ class BestSellerListViewItem extends StatelessWidget {
       child: Row(
         children: [
           AspectRatio(
-      aspectRatio: 2.5 / 4,
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(2),
-          image: const DecorationImage(fit: BoxFit.fill, image: AssetImage(AssetsData.test_image)),
-        ),
-      ),
-    )
+            aspectRatio: 2.5 / 4,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(2),
+                image: const DecorationImage(
+                  fit: BoxFit.fill,
+                  image: AssetImage(AssetsData.test_image),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(width: 30),
+          Column(
+            children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width * .5,
+                child: Text(
+                  "Harry Potter and the Goblet of Fire",
+                  style: Styles.textStyle20,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
