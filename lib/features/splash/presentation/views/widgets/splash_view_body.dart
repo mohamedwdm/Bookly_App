@@ -20,11 +20,9 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
   void initState() {
     // TODO: implement initState
     super.initState();
-    InitSlidingAnimation();
-    NivigateToHome();
+    initSlidingAnimation();
+    nivigateToHome();
   }
-
-
 
   @override
   void dispose() {
@@ -46,20 +44,24 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
     );
   }
 
-  void InitSlidingAnimation() {
+  void initSlidingAnimation() {
     animationController = AnimationController(vsync: this, duration: const Duration(seconds: 1));
 
     slidinganimation = Tween<Offset>(
-      begin: Offset(0, 4),
+      begin: const Offset(0, 4),
       end: Offset.zero,
     ).animate(animationController);
 
     animationController.forward();
   }
 
-    void NivigateToHome() {
+  void nivigateToHome() {
     Future.delayed(const Duration(seconds: 2), () {
-      Get.to(() => HomeView(), duration: kTransitionDuration, transition: Transition.rightToLeftWithFade);
+      Get.to(
+        () => const HomeView(),
+        duration: kTransitionDuration,
+        transition: Transition.rightToLeftWithFade,
+      );
     });
   }
 }
