@@ -16,10 +16,11 @@ class BestSellerListViewItem extends StatelessWidget {
         GoRouter.of(context).push(AppRoutes.kBookDetailesView);
       },
       child: SizedBox(
-        height: 125,
+        height: 120,
         child: Row(
           children: [
             AspectRatio(
+              
               aspectRatio: 2.5 / 4,
               child: Container(
                 decoration: BoxDecoration(
