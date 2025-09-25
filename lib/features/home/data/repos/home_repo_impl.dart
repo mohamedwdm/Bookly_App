@@ -19,7 +19,7 @@ class HomeRepoImpl implements HomeRepo {
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));
       }
-
+      
       return right(books);
     } on Exception catch (e) {
       return left(ServerFailure());
