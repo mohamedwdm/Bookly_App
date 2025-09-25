@@ -8,7 +8,7 @@ class BookDetailesViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
+    return const CustomScrollView(// add this for expanded widget not single child scroll vie
       slivers: [
         SliverFillRemaining(
           hasScrollBody: false,
