@@ -15,12 +15,18 @@ class HomeViewBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Padding(padding: EdgeInsets.symmetric(horizontal: 30.0), child: CustomAppBar()),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30.0),
+                child: CustomAppBar(),
+              ),
               const FeaturedBooksListView(),
               const SizedBox(height: 50),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                child: Text('Best Seller', style: Styles.textStyle18.copyWith(color: Colors.white)),
+                child: Text(
+                  'Best Seller',
+                  style: Styles.textStyle18.copyWith(color: Colors.white),
+                ),
               ),
               const SizedBox(height: 20),
             ],
@@ -32,10 +38,7 @@ class HomeViewBody extends StatelessWidget {
             child: BestSellerListView(),
           ),
         ),
-        
       ],
     );
   }
 }
-
-

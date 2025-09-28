@@ -13,8 +13,14 @@ abstract class AppRoutes {
       GoRoute(path: '/', builder: (context, state) => const SplashView()),
 
       GoRoute(path: kHomeView, builder: (context, state) => const HomeView()),
-      GoRoute(path: kBookDetailesView, builder: (context, state) => const BookDetailesView()),
-      GoRoute(path: kSearchView, builder: (context, state) => const SearchView()),
+      GoRoute(
+        path: kBookDetailesView,
+        builder: (context, state) => const BookDetailesView(),
+      ),
+      GoRoute(
+        path: kSearchView,
+        builder: (context, state) => const SearchView(),
+      ),
     ],
   );
 }

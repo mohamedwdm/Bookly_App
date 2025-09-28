@@ -11,9 +11,12 @@ class SplashViewBody extends StatefulWidget {
   State<SplashViewBody> createState() => _SplashViewBodyState();
 }
 
-class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProviderStateMixin {
-  late AnimationController animationController; //from 0 to 1 we want more than this
-  late Animation<Offset> slidinganimation; // but controller on ot to make it not to 1 only
+class _SplashViewBodyState extends State<SplashViewBody>
+    with SingleTickerProviderStateMixin {
+  late AnimationController
+  animationController; //from 0 to 1 we want more than this
+  late Animation<Offset>
+  slidinganimation; // but controller on ot to make it not to 1 only
 
   @override
   void initState() {
@@ -44,7 +47,10 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
   }
 
   void initSlidingAnimation() {
-    animationController = AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 1),
+    );
 
     slidinganimation = Tween<Offset>(
       begin: const Offset(0, 4),

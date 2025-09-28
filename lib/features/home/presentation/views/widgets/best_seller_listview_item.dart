@@ -20,7 +20,6 @@ class BestSellerListViewItem extends StatelessWidget {
         child: Row(
           children: [
             AspectRatio(
-              
               aspectRatio: 2.5 / 4,
               child: Container(
                 decoration: BoxDecoration(
@@ -55,7 +54,9 @@ class BestSellerListViewItem extends StatelessWidget {
                     children: [
                       Text(
                         "19.99 €",
-                        style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),
+                        style: Styles.textStyle20.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       const Spacer(),
                       const BookRating(),

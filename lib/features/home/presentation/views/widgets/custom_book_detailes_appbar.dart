@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class CustomBookDetailesAppBar extends StatelessWidget {
@@ -7,13 +5,14 @@ class CustomBookDetailesAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-
-        IconButton(onPressed: (){}, icon: const Icon(Icons.close)),
-        IconButton(onPressed: (){}, icon: const Icon(Icons.shopping_cart_outlined)),
-
+        IconButton(onPressed: () {}, icon: const Icon(Icons.close)),
+        IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.shopping_cart_outlined),
+        ),
       ],
     );
   }

@@ -1,4 +1,3 @@
-
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/books_action.dart';
@@ -19,7 +18,10 @@ class BooksDetailsSection extends StatelessWidget {
           child: const CustomBookItem(),
         ),
         const SizedBox(height: 40),
-        Text("The Jungle Book", style: Styles.textStyle30.copyWith(fontWeight: FontWeight.bold)),
+        Text(
+          "The Jungle Book",
+          style: Styles.textStyle30.copyWith(fontWeight: FontWeight.bold),
+        ),
         const SizedBox(height: 3),
         Text(
           "Rudyard Kipling",
