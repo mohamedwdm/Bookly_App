@@ -9,9 +9,9 @@ class NewstBooksCubit extends Cubit<NewstBooksState> {
   NewstBooksCubit(this.homeRepo) : super(NewstBooksInitial());
 
   final HomeRepo homeRepo;
-  Future<void> fetchFeaturedBooks() async {
+  Future<void> fetchNewstBooks() async {
     emit(NewstBooksLoading());
-    var result = await homeRepo.fetchFeaturedBooks();
+    var result = await homeRepo.fetchNewstBooks();
     result.fold(
       (failure) {
         emit(NewstBooksFailure(errorMessege: failure.errMessage));
