@@ -22,7 +22,7 @@ class NewstBooksListViewItem extends StatelessWidget {
         height: 120,
         child: Row(
           children: [
-            CustomBookItem(imageUrl: bookModel.volumeInfo.imageLinks.thumbnail),
+            CustomBookItem(imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? ""),
             const SizedBox(width: 30),
             Expanded(
               child: Column(
@@ -43,7 +43,7 @@ class NewstBooksListViewItem extends StatelessWidget {
                   const SizedBox(height: 3),
                   Text(
                     bookModel.volumeInfo.authors![0],
-                    style: Styles.textStyle14,
+                    style: Styles.textStyle14,overflow: TextOverflow.ellipsis,
                   ),
                   Row(
                     children: [
