@@ -14,7 +14,7 @@ class SimilarBooksListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return const Padding(
             padding: EdgeInsets.symmetric(horizontal: 4.0),
-            child: CustomBookItem(),
+            child: CustomBookItem(imageUrl: 'https://thumbs.dreamstime.com/b/brown-closed-book-illustration-vector-format-43259765.jpg',),
           );
         },
       ),

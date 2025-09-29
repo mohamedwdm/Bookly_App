@@ -15,7 +15,7 @@ class BooksDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .20),
-          child: const CustomBookItem(),
+          child: const CustomBookItem(imageUrl: 'https://thumbs.dreamstime.com/b/brown-closed-book-illustration-vector-format-43259765.jpg',),
         ),
         const SizedBox(height: 40),
         Text(
